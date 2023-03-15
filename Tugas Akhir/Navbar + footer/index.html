@@ -1,0 +1,71 @@
+<header>
+    <nav>
+        <a href="#" class="logo"><img src="Images/Kenzhie-Impek.png" alt="" class="logoImg"></a>
+        <div class="nav-right">
+            <ul class="nav1">
+                <a href="aboutUs.html" class="navItem"><li>About</li></a>
+                <a href="#" class="navItem"><li>Characters</li></a>
+                <a href="index.html" class="navItem"><li>Maps</li></a>
+            </ul>
+            <a href="#" class="login">Login</a>
+        </div>
+        <i id="menuBar" class="fa-solid fa-bars"></i>
+    </nav>
+    <div class="dropdown" >
+        <a href="aboutUs.html" class="navItem"><li>About</li></a>
+        <a href="#" class="navItem"><li>Characters</li></a>
+        <a href="index.html" class="navItem"><li>Maps</li></a>
+        <a href="#" class="login"> <li>Login</li></a>
+    </div>
+</header>
+
+<footer>
+    <div class="sosmed">
+        <div class="icons">
+            <a href="https://twitter.com/GenshinImpact"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/genshinimpact/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://discord.com/invite/genshinimpact"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.reddit.com/r/Genshin_Impact/"><i class="fa-brands fa-reddit"></i></a>
+        </div>
+    </div>
+    <div class="footerAsli">
+        <img src="assets/Kenzhie Impek.png" alt="" class="logo-footer">
+        <div class="footer-link">
+            <a href="https://genshin.hoyoverse.com/en/company/privacy"><p>Privacy Policy</p></a>
+            <a href="https://genshin.hoyoverse.com/en/company/terms"><p>Terms Of Use</p></a>
+            <a href="aboutUs.html"><p>About Us</p></a>
+            <a href="#"><p>Contact Us</p></a>
+        </div>
+        <div class="footer-sisa">
+            <div class="footer-sisa-p">
+                <p>PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                </p>
+                <p>
+                    Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.
+                </p>
+            </div>
+            <div class="tm">
+                <img src="Images/Logo-Teen.png" alt="">
+            </div>
+            <div class="hoyo">
+                <img src="Images/Logo-Hoyoverse.png" alt="">
+            </div>
+            <p>
+                Copyright © COGNOSPHERE. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const menu = document.querySelector('#menuBar');
+    const menuLinks = document.querySelector('.dropdown');
+
+    menu.addEventListener('click', function() {
+        menu.classList.toggle("fa-xmark");
+        menu.classList.toggle('is-active');
+        menu.classList.toggle("fa-bars");
+        menuLinks.classList.toggle('active');
+    });
+</script>

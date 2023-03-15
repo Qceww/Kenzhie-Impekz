@@ -1,0 +1,387 @@
+body {
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    user-select: none;
+    background-color: #00010b;
+}
+
+p {
+    color: white;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+
+.background{
+    position: relative;
+    object-fit: cover;
+}
+
+#background, #aether{
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#aether{
+    z-index: 10;
+    opacity: 0;
+}
+
+#aether-depan{
+    width: 100vw;
+    margin-top: 23.7%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+#title{
+    position: absolute;
+    left: 31.5%;
+    margin-top: 10%;
+    width: 36%;
+    z-index: 1;
+}
+
+.news-updates {
+    background-color: #00010b;
+    width: 100%;
+    position: relative;
+}
+
+#news-updates{
+    display: flex;
+    justify-content: center;
+}
+
+#news-updates h1{
+    color: white;
+    font-size: calc(4em);    
+}
+
+.container-news-slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-3{
+    margin: 3%;
+    display: relative;
+    width: max-content;
+    display: none;
+    animation: 1.5s fade;
+    gap: 20px;
+}
+
+.slide{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.slide img, .slide span{
+    width: 100%;
+}
+
+@keyframes fade {
+    from{opacity: 0.3}
+    to {opacity: 1}
+}
+
+#prev, #next{
+    user-select: none;
+    top: 63%;
+    width: 3%;
+    position: absolute;
+    cursor: pointer;
+}
+
+#prev{
+    left: 5%;
+}
+
+#next{
+    right: 5%;
+}
+
+#tanggal, #title-news{
+    color: white;
+}
+
+#tanggal{
+    font-size: 1em;
+    margin-top: 6px;
+}
+
+#title-news{
+    font-size: calc(1.5em / 50%);
+}
+
+.character{
+    position: relative;
+    width: 100vw;
+    padding-top: 0;
+    background-image: url(Images2/PNG/Character-Background.png);
+    background-size: cover;
+}
+
+.judul-character{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.character h1{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#character{
+    font-size: 76px;
+}
+
+.container-character-slider{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.character-slider{
+    position: relative;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    animation: fade 1s;
+}
+
+.nama-character{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 32px;    
+}
+
+.gambar-character{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gambar-character img{
+    width: 100%;
+}
+
+.bawah{
+    align-self: end; /*Buat Column kalo Justify-content row buat */
+}
+
+
+#panah-kanan, #panah-kiri{
+    position: absolute;
+    top: 50%;
+    width: 2.7%;
+}
+
+#panah-kanan{
+    left: 5%;
+}
+
+#panah-kiri{
+    right: 5%;   
+}
+
+.weapon{
+    background-image: url(Images2/PNG/Weapons-Background.png);
+    background-size: cover ;
+    width: 100%;
+}
+
+.weapon-tulisan{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 44px;
+}
+
+.weapon-gambar-aja{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.weapon-gambar-aja img{
+    width: 80%;
+}
+
+.footer img{
+    width: 100%;
+}
+
+header{
+    position: relative;
+    user-select: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20vw;
+    align-items: center;
+    /* padding: 10px 10%; */
+    background: linear-gradient(180deg, rgba(75, 68, 68, 0.85) 0%, rgba(76, 76, 76, 0) 100%);
+
+}
+
+.nav-right{
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+    align-items: center;
+    /* color: white; */
+}
+
+.nav-right a {
+    color: white;
+}
+
+
+.login{
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    font-size: larger;
+    left: 0;
+}
+
+.logoImg{
+    width: 75%;
+    height: 50%;
+}
+
+.nav1 {
+    list-style: none;
+    
+}
+
+.nav1 li {
+    display: inline;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.nav1 li:hover{
+    color: lightblue;
+}
+
+
+footer{
+    position: relative;
+    height: 90vh;
+    background-color: black;
+    color: white;
+    margin-top: 10%;
+}
+
+.sosmed{
+    background-color: rgb(20, 40, 40);
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.icons{
+    margin-left: 4vw;
+}
+
+.sosmed i{
+    font-size: 20px;
+    padding: 1vw;
+    color: white;
+    opacity: 0.5;
+    /* background-color: antiquewhite; */
+}
+
+.sosmed a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footerAsli{
+    color: white;
+    text-align: center;
+}
+
+.logo-footer{
+    margin-top: 10vh;
+}
+
+.footer-link{
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer-link p{
+    color: white;
+    opacity: 0.5;
+}
+
+.footer-link a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footer-sisa{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.footer-sisa p{
+    color: white;
+}
+
+.footer-sisa-p p{
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 5vh;
+}

@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    font-weight: lighter;
+    font-size: small;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+button{
+    border: none;
+    background-color: #404040;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    font-weight: lighter;
+    font-size: small;
+}
+
+@font-face{
+    font-family: HYWenHei;
+    src: url('assets/Genshin-Impact-Font/zh-cn.ttf');
+}
+header{
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    /* background: linear-gradient(180deg, rgba(75, 68, 68, 0.85) 0%, rgba(76, 76, 76, 0) 100%); */
+    background-color: rgb(28, 28, 28);
+}
+
+.nav-right{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    
+}
+
+
+
+.login{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    color: white;
+}
+
+.login:hover{
+    color: lightblue;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    font-size: larger;
+    left: 0;
+}
+
+
+.logoImg{
+    width: 75%;
+    height: 50%;
+}
+
+.nav1 {
+    list-style: none;
+    display: flex;
+}
+
+.nav1 li {
+    /* display: inline; */
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: white;
+}
+
+.navItem :hover{
+    color: lightblue;
+    transition: all 0.2s;
+    font-weight: 800;
+}
+
+#menuBar{
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+.dropdown{
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    .nav-right{
+        display: none;
+    }
+    #menuBar{
+        display: block;
+        font-size: larger;
+        cursor: pointer;
+    }
+
+
+
+    .dropdown li{
+        list-style: none;
+    }
+
+    .dropdown{
+        color: white;
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        height: 50vh;
+        top: -10000px;
+        text-align: center;
+        transition: all 0.5s ease;
+        background-color: rgb(28, 28, 28);
+
+    }
+
+    .dropdown li{
+        color: white;
+        padding: 2rem;
+    }
+
+    .dropdown.active{
+        position: fixed;
+        background-color: rgb(28, 28, 28);
+        opacity: 0.7;
+        top: 73px;
+        transition: all 0.5s ease;
+        height: 50vh;
+        font-size: 1.6rem;
+        z-index: 20;
+    }
+
+
+}
+
+
+.container-semua{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.automated-carousel{
+    position: relative;
+    height: 100vh;
+}
+
+.carousel-item{
+    position: relative;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-img{
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    animation: fade 0.7s;
+}
+
+@keyframes fade {
+    from{opacity: 0.7;}
+    to{opacity: 1;}
+}
+
+.character-atas {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    top: 13%;
+}
+
+.character-show{
+    position: relative;
+    width: 100%;
+}
+
+.character-show img{
+    width: 70%;
+}
+
+.character-explanation{
+    position: absolute;
+    width: 25%;
+    right: 2.8%;
+    top: 10%;
+}
+
+.character-explanation .character-name{
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#char-name{
+    font-size: 36px;
+}
+
+.character-description{
+    font-size: 16px;
+}
+
+#garis{
+    width: 100%;
+}
+
+.character-bawah{
+    margin-top: -10%;
+    position: relative;
+    height: 20%;
+    width: 100%;
+    background-image: linear-gradient(#404040, #000000);
+}
+
+.region{
+    display: flex;
+    justify-content: space-around ;
+}
+
+.character-list{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.container-head{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.character-head{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.character-head img{
+    width: 100%;
+}
+
+.character-head-name{
+    display: flex;
+    justify-content: center;  
+    font-size: 18px;  
+}
+
+.character-highlight{
+    background-color: rgba(255 ,255, 255, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    button{
+        font-size: 12px;
+    }
+
+    .character-show{
+        margin-top: 22%;
+    }
+    
+    .character-bawah{
+        margin-top: -23%;
+    }
+    
+    #char-name{
+        font-size: 20px;
+    }
+    
+    .character-explanation{
+        margin-top: 35%;
+    }
+
+    .character-description{
+        font-size: 12px;
+    }
+    
+    .character-head-name{
+        font-size: 12px;
+    }
+    
+    .character-head img, .container-head{
+        width: 80%;
+    }
+    
+    .character-head img{
+        margin-left: 9%;
+    }
+    
+}
+
+@media screen and (max-width: 425px){
+    .carousel-item{
+        height: 88vh;
+    }
+    
+    button{
+        font-size: 10px;
+    }
+    
+    #char-name{
+        font-size: 12px;
+    }
+    
+    .character-show{
+        margin-top: 62%;
+    }
+
+    .character-head img, .container-head{
+        width: 90%;
+    }
+    
+    .character-description{
+        font-size: 9px;
+        width: 110%;
+    }
+
+    .character-explanation{
+        margin-top: 70%;
+        margin-right: 30px;
+    }
+    
+    footer{
+        margin-top: -6.1%;
+    }
+
+    .character-head-name{
+        font-size: 10px;
+    }
+
+}
+
+
+/** Character */
+.character-active{
+    opacity: 1;
+}
+
+.character-deactive{
+    opacity: 0.4;
+}
+
+/** Button */
+.mondstat-active{
+    color: #C6F0EC;
+}
+
+.liyue-active{
+    color: #F7BD6A;
+}
+
+.inazuma-active{
+    color: #E87AEA;
+}
+
+.sumeru-active{
+    color: #29EC61;
+}
+
+/* Footer */   
+footer{
+    height: 90%;
+    background-color: black;
+    color: white;
+}
+
+.sosmed{
+    background-color: rgb(20, 40, 40);
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.icons{
+    margin-left: 4vw;
+}
+
+.sosmed i{
+    font-size: 20px;
+    padding: 1vw;
+    color: white;
+    opacity: 0.5;
+    /* background-color: antiquewhite; */
+}
+
+.sosmed a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footerAsli{
+    color: white;
+    text-align: center;
+}
+
+.logo-footer{
+    margin-top: 10vh;
+}
+
+.footer-link{
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer-link p{
+    color: white;
+    opacity: 0.5;
+}
+
+.footer-link a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footer-sisa{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.footer-sisa p{
+    color: white;
+}
+
+.footer-sisa-p p{
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 5vh;
+}

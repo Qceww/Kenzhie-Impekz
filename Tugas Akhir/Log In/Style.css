@@ -1,0 +1,398 @@
+body {
+    background-image: url(Images/Background-Full.svg);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0E025B;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+}
+
+.container-login, .container-register{
+    position: absolute;
+    display: flex;
+    align-items: start;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
+    width: 500px;
+    left: 55vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    content: " ";
+    width: 500px;
+    justify-content: start;
+}
+
+@media screen and (max-width: 768px) {
+    .container-login, .container-register{
+        left: 0;
+        width: 100vw;
+    }
+}
+
+.container-register{
+    display: none;
+}
+
+.container-kotak{
+    position: relative;
+    width: 100%;
+}
+
+#login, #register, #logina, #registera{
+    user-select: none;
+    margin-left: 70px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#logina{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#registera{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.active{
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.deactive{
+    font-size: 24px;
+}
+
+.login-register{
+    margin-top: 200px;
+    display: flex;
+    align-items: end;
+}
+
+#divError, #divErrorRegis{
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: red;
+}
+
+.form{
+    /* background-color: pink;  */
+    margin-top: 10px;
+    margin-left: 70px;
+    font-size: 18px;
+}
+
+.username, .password, .email, .repassword, .age{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#inputUsername, #inputPassword, #inputUsernameRegis, #inputPasswordRegis, #inputEmailRegis, #inputAgeRegis, #inputRepasswordRegis{
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 80%;
+}
+
+#submit, #submit-register{
+    user-select: none;
+    border-radius: 5px;
+    border: none;
+    background-color: #0E025B;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+::placeholder{
+    opacity: 0.3;
+    color: black;
+}
+
+.policy{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+}  
+
+/* Header */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: HYWenHei;
+    src: url('assets/Genshin-Impact-Font/zh-cn.ttf');
+}
+header{
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    /* background: linear-gradient(180deg, rgba(75, 68, 68, 0.85) 0%, rgba(76, 76, 76, 0) 100%); */
+    background-color: rgb(28, 28, 28);
+}
+
+.nav-right{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    
+}
+
+
+
+.login{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    color: white;
+}
+
+.login:hover{
+    color: lightblue;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    font-size: larger;
+    left: 0;
+}
+
+
+.logoImg{
+    width: 75%;
+    height: 50%;
+}
+
+.nav1 {
+    list-style: none;
+    display: flex;
+}
+
+.nav1 li {
+    /* display: inline; */
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: white;
+}
+
+.navItem :hover{
+    color: lightblue;
+    transition: all 0.2s;
+    font-weight: 800;
+}
+
+#menuBar{
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+.dropdown{
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    .nav-right{
+        display: none;
+    }
+    #menuBar{
+        display: block;
+        font-size: larger;
+        cursor: pointer;
+    }
+
+
+
+    .dropdown li{
+        list-style: none;
+    }
+
+    .dropdown{
+        color: white;
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        height: 50vh;
+        top: -10000px;
+        text-align: center;
+        transition: all 0.5s ease;
+        background-color: rgb(28, 28, 28);
+
+    }
+
+    .dropdown li{
+        color: white;
+        padding: 2rem;
+    }
+
+    .dropdown.active{
+        position: fixed;
+        background-color: rgb(28, 28, 28);
+        opacity: 0.7;
+        top: 73px;
+        transition: all 0.5s ease;
+        height: 50vh;
+        font-size: 1.6rem;
+        z-index: 20;
+    }
+
+
+}
+
+
+/* Footer */   
+footer{
+    height: 90%;
+    background-color: black;
+    color: white;
+}
+
+.sosmed{
+    background-color: rgb(20, 40, 40);
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.icons{
+    margin-left: 4vw;
+}
+
+.sosmed i{
+    font-size: 20px;
+    padding: 1vw;
+    color: white;
+    opacity: 0.5;
+    /* background-color: antiquewhite; */
+}
+
+.sosmed a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footerAsli{
+    color: white;
+    text-align: center;
+}
+
+.logo-footer{
+    margin-top: 10vh;
+}
+
+.footer-link{
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer-link p{
+    color: white;
+    opacity: 0.5;
+}
+
+.footer-link a :hover{
+    color: white;
+    opacity: 1;
+}
+
+.footer-sisa{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.footer-sisa p{
+    color: white;
+}
+
+.footer-sisa-p p{
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 768px) {
+    footer{
+        height: 40%;
+        font-size: 10px;
+    }
+
+    .footer-sisa-p{
+        display: none;
+    }
+
+    .footer-link{
+        margin-top: 2vh;
+        margin-bottom: 3vh;
+    }
+
+    .logo-footer{
+        scale: 0.8;
+        margin-top: 5vh;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .logo-footer{
+        scale: 0.7;
+    }
+    
+    footer p{
+        font-size: 10px;
+    }
+
+    .footer-sisa img {
+        display: none;
+    }
+
+}
